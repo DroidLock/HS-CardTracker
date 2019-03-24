@@ -2,7 +2,6 @@ package View;
 
 import Controller.CardController;
 import Controller.iCardController;
-import Models.Card;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.json.JSONArray;
 import java.io.BufferedReader;
@@ -63,6 +62,23 @@ public class ConsoleApp implements iConsoleApp {
      * @return
      * @throws UnirestException
      */
+    public String showAllCards() throws UnirestException {
+        JSONArray all = controller.getAllCards();
+
+        //ToDo Alphabetical order not working, has to be fixed... running now without error, but not sorting
+        Arrays.sort(new JSONArray[]{all});
+
+        for (int i = 0; i < all.length(); i++) {
+            System.out.printf("%-40s%s%n", "Cardname: " + all.getJSONObject(i).getString("name"),
+                    "Cardtype: " + all.getJSONObject(i).getString("type"));
+        }
+        return null;
+    }
+
+    /**
+     * @return
+     * @throws UnirestException
+     */
     public void searchMenue() throws IOException {
         String selection = "";
 
@@ -94,23 +110,6 @@ public class ConsoleApp implements iConsoleApp {
     }
 
     /**
-     * @return
-     * @throws UnirestException
-     */
-    public String showAllCards() throws UnirestException {
-        JSONArray all = controller.getAllCards();
-
-        //ToDo Alphabetical order not working, has to be fixed... running now without error, but not sorting
-        Arrays.sort(new JSONArray[]{all});
-
-        for (int i = 0; i < all.length(); i++) {
-            System.out.printf("%-40s%s%n", "Cardname: " + all.getJSONObject(i).getString("name"),
-                    "Cardtype: " + all.getJSONObject(i).getString("type"));
-        }
-        return null;
-    }
-
-    /**
      * @throws IOException
      */
     public void searchMinion() throws IOException {
@@ -127,9 +126,22 @@ public class ConsoleApp implements iConsoleApp {
             mainMenue();
         } else {
             try {
-                //Get the Card-Object back which was searched and print out to console
-                Card card = controller.getMinion(cardName);
-                System.out.println(card.toString());
+                //Get the Card as string back which was searched and print out to console
+//                Minion card = controller.getMinion(cardName);
+                String card = controller.getMinion(cardName);
+                System.out.println(card);
+                System.out.println();
+                System.out.println("1. Möchten sie die Karte speichern");
+                System.out.println("2. Weiter suchen");
+                String selection = reader.readLine();
+                if(selection.equals("1")){
+                    controller.insertMinion(cardName);
+                } if(selection.equals("2")){
+                    searchMenue();
+                }
+                else {
+                    System.out.println("Wählen sie einen Menüpunkt aus");
+                }
             } catch (NullPointerException e) {
                 System.out.println("Karte konnte nicht gefunden werden ConsoleApp");
 //                e.printStackTrace();
@@ -158,8 +170,9 @@ public class ConsoleApp implements iConsoleApp {
         } else {
             try {
                 //Get the Card-Object back which was searched and print out to console
-                Card card = controller.getSpell(cardName);
-                System.out.println(card.toString());
+                String card = controller.getSpell(cardName);
+                System.out.println(card);
+
             } catch (NullPointerException e) {
                 System.out.println("Karte konnte nicht gefunden werden ConsoleApp");
 
@@ -184,6 +197,7 @@ public class ConsoleApp implements iConsoleApp {
      */
     public void saveCard() {
         //Todo create a Mehtod to save card in Database
+
     }
 
 

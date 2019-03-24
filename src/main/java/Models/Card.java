@@ -92,15 +92,5 @@ public class Card {
         this.image = image;
     }
 
-    @Override
-    public String toString() {
-        return "Cardresult: " + '\n' +
-                "Name: " + name + '\n' +
-                "Cost: " + cost + '\n' +
-                "Attack: " + attack + '\n' +
-                "Health: " + health + '\n' +
-                "Type: " + type + '\n' +
-                "Text: " + text + '\n' +
-                "Image: " + image + '\n';
-    }
+
 }
