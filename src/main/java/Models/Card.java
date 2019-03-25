@@ -20,7 +20,8 @@ public class Card {
         this.rarity = rarity;
         this.image = image;
     }
-    public Card(String name, int cost, String type, String text, String image){
+
+    public Card(String name, int cost, String type, String text, String image) {
         this.name = name;
         this.cost = cost;
         this.type = type;

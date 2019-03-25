@@ -17,7 +17,7 @@ public class DBConnection {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
             System.out.println("DbConnection Instanzierung fehlgeschlagen");
-        } catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println("SQL exception occured " + e);
         }
         return conn;

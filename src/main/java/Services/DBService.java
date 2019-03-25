@@ -9,8 +9,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class DBService implements iDBService {
-
-
     /**
      * @param minion
      * @throws SQLException
@@ -21,10 +19,10 @@ public class DBService implements iDBService {
         String insertTableSQL = "INSERT INTO minion"
                 + "(name, cost, attack, health, type, text, rarity, image) VALUES"
                 + "(?, ?, ?, ?, ?, ?, ?, ?)";
-        try{
+        try {
             Connection conn = DBConnection.getInstance();
             ps = conn.prepareStatement(insertTableSQL);
-            ps.setString(1,minion.getName());
+            ps.setString(1, minion.getName());
             ps.setInt(2, minion.getCost());
             ps.setInt(3, minion.getAttack());
             ps.setInt(4, minion.getHealth());
@@ -38,7 +36,7 @@ public class DBService implements iDBService {
             System.out.println("Minion erfolgreich in der Datenbank gespeichert");
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             if (ps != null) {
                 ps.close();
             }
@@ -49,6 +47,6 @@ public class DBService implements iDBService {
     }
 
     public void saveSpell(Spell spell) {
- //// TODO: 24/03/2019 finish code for inserting spell into the database
+        //// TODO: 24/03/2019 finish code for inserting spell into the database
     }
 }

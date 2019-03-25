@@ -4,6 +4,7 @@ import Controller.CardController;
 import Controller.iCardController;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.json.JSONArray;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -134,12 +135,12 @@ public class ConsoleApp implements iConsoleApp {
                 System.out.println("1. Möchten sie die Karte speichern");
                 System.out.println("2. Weiter suchen");
                 String selection = reader.readLine();
-                if(selection.equals("1")){
+                if (selection.equals("1")) {
                     controller.insertMinion(cardName);
-                } if(selection.equals("2")){
-                    searchMenue();
                 }
-                else {
+                if (selection.equals("2")) {
+                    searchMenue();
+                } else {
                     System.out.println("Wählen sie einen Menüpunkt aus");
                 }
             } catch (NullPointerException e) {
@@ -150,6 +151,7 @@ public class ConsoleApp implements iConsoleApp {
             }
         }
     }
+
     /**
      * Let the user enter a spell card to get details from hearthstone api
      *
