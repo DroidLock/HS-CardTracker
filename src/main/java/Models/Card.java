@@ -8,9 +8,9 @@ public class Card {
     private String type;
     private String text;
     private String rarity;
-    private String image;
+    private String imgGold;
 
-    public Card(String name, int cost, int attack, int health, String type, String text, String rarity, String image) {
+    public Card(String name, int cost, int attack, int health, String type, String text, String rarity, String imgGold) {
         this.name = name;
         this.cost = cost;
         this.attack = attack;
@@ -18,15 +18,15 @@ public class Card {
         this.type = type;
         this.text = text;
         this.rarity = rarity;
-        this.image = image;
+        this.imgGold = imgGold;
     }
 
-    public Card(String name, int cost, String type, String text, String image) {
+    public Card(String name, int cost, String type, String text, String imgGold) {
         this.name = name;
         this.cost = cost;
         this.type = type;
         this.text = text;
-        this.image = image;
+        this.imgGold = imgGold;
     }
 
     public String getName() {
@@ -85,12 +85,12 @@ public class Card {
         this.rarity = rarity;
     }
 
-    public String getImage() {
-        return image;
+    public String getImgGold() {
+        return imgGold;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setImgGold(String imgGold) {
+        this.imgGold = imgGold;
     }
 
 

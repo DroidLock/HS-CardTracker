@@ -24,7 +24,9 @@ public class CardService implements iCardService {
     }
 
     public JSONArray searchSpell(String spell) throws UnirestException {
+
         //// TODO: 24/03/2019 exception handling
+
         HttpResponse<JsonNode> response = Unirest.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/" + spell)
                 .header("X-RapidAPI-Key", "b3e04ebcc2mshe4ccee4fec2e0b2p155f72jsnb66518417065")
                 .asJson();

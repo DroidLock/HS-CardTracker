@@ -2,19 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="646b16e5-93d1-4c99-bec9-4d8b1e676820" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Repository/CardRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Repository/iCardRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/iCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/iCardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Models/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Minion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Minion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Spell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Spell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/CardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/DBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/DBService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/iCardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/iCardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/iDBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/iDBService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/View/ConsoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/ConsoleApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/View/iConsoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/iConsoleApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/ReplaceWhiteSpace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/ReplaceWhiteSpace.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controller/CardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/CardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/iCardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/iCardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/CardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/CardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/View/ConsoleApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/View/ConsoleApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/View/iConsoleApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/View/iConsoleApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/start.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/start.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -33,14 +41,17 @@
     <session id="-273575819">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -51,31 +62,31 @@
           <entry key="JavaScript-modules-diagram/C:/Users/DroidLock/IdeaProjects/RestExampleV1/src/main" value="1" />
           <entry key="JavaScript-modules-diagram/C:/Users/DroidLock/IdeaProjects/RestExampleV1/src/main/java/View;C:/Users/DroidLock/IdeaProjects/RestExampleV1/src/main/java/Services;C:/Users/DroidLock/IdeaProjects/RestExampleV1/src/main/java/Models;C:/Users/DroidLock/IdeaProjects/RestExampleV1/src/main/java/Controller;" value="1" />
           <entry key="MODULES/mdl-RestExampleV1" value="2" />
-          <entry key="class" value="4" />
-          <entry key="java" value="52" />
-          <entry key="xml" value="1" />
+          <entry key="class" value="6" />
+          <entry key="java" value="73" />
+          <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="4" />
-          <entry key="JAVA" value="52" />
+          <entry key="CLASS" value="6" />
+          <entry key="JAVA" value="73" />
           <entry key="UML" value="8" />
-          <entry key="XML" value="1" />
+          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="15" />
-          <entry key="java" value="10347" />
+          <entry key="dummy" value="29" />
+          <entry key="java" value="11351" />
           <entry key="txt" value="85" />
           <entry key="xml" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10347" />
-          <entry key="PLAIN_TEXT" value="100" />
+          <entry key="JAVA" value="11351" />
+          <entry key="PLAIN_TEXT" value="114" />
           <entry key="XML" value="7" />
         </counts>
       </usages-collector>
@@ -84,22 +95,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Services/CardService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Controller/CardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/start.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="1296">
+              <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,10 +107,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Services/DBService.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar!/com/google/gson/Gson.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+            <state relative-caret-position="10392">
+              <caret line="486" column="17" selection-start-line="486" selection-start-column="17" selection-end-line="486" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Repository/CardRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,31 +139,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/View/ConsoleApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="132" column="41" selection-start-line="132" selection-start-column="41" selection-end-line="132" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#mainMenue#0;class#ConsoleApp#0" />
-                <element signature="method#showAllCards#0;class#ConsoleApp#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/View/iConsoleApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Services/iCardService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="70" selection-start-line="8" selection-start-column="70" selection-end-line="8" selection-end-column="70" />
+            <state relative-caret-position="4056">
+              <caret line="178" column="44" selection-start-line="178" selection-start-column="44" selection-end-line="178" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -155,10 +149,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Services/iDBService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Models/Card.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="216">
+              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Services/CardService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1152">
+              <caret line="52" column="49" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,26 +172,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/utilities/DBConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utilities/iReplaceWhiteSpace.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utilities/ReplaceWhiteSpace.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="96">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -203,6 +188,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>attack</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -214,21 +204,24 @@
         <option value="$PROJECT_DIR$/src/main/java/utilities/iReplaceWhiteSpace.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/Spells.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/Minions.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Services/CardService.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/Minion.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/Spell.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Controller/CardController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Controller/iCardController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Models/Card.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Services/DBService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Services/iCardService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Services/iDBService.java" />
         <option value="$PROJECT_DIR$/src/main/java/utilities/DBConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/utilities/ReplaceWhiteSpace.java" />
+        <option value="$PROJECT_DIR$/src/main/java/start.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Repository/iCardRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Repository/ClassRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Services/DBService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Controller/iCardController.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/ConsoleApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/View/iConsoleApp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/start.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Services/iDBService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Services/iCardService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Repository/CardRepository.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Models/Card.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Services/CardService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Controller/CardController.java" />
       </list>
     </option>
   </component>
@@ -258,7 +251,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -306,6 +299,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RestExampleV1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RestExampleV1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -328,21 +329,21 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553514402518" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553636737154" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mavenTestProject" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -388,7 +389,10 @@
       <workItem from="1553359982989" duration="2170000" />
       <workItem from="1553362187688" duration="29198000" />
       <workItem from="1553445824250" duration="5000" />
-      <workItem from="1553512085298" duration="1643000" />
+      <workItem from="1553512085298" duration="14214000" />
+      <workItem from="1553584007244" duration="9182000" />
+      <workItem from="1553676955304" duration="3836000" />
+      <workItem from="1553776317292" duration="622000" />
     </task>
     <task id="LOCAL-00001" summary="Database Connection Done&#10;saveMinionMethod Done&#10;next... saveSpell">
       <created>1553445084919</created>
@@ -404,11 +408,18 @@
       <option name="project" value="LOCAL" />
       <updated>1553445546255</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="next... saveSpell">
+      <created>1553514923553</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1553514923553</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61266000" />
+    <option name="totallyTimeSpent" value="87477000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -423,8 +434,8 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.67964405" visible="true" weight="0.20415778" />
-      <window_info id="Structure" order="1" sideWeight="0.26807564" side_tool="true" weight="0.32932165" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6784141" visible="true" weight="0.21268657" />
+      <window_info id="Structure" order="1" sideWeight="0.3215859" side_tool="true" weight="0.20415778" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -433,7 +444,7 @@
       <window_info id="simpleUML" order="7" sideWeight="0.73192436" weight="0.32932165" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32929516" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38656387" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2907489" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39977974" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -454,26 +465,26 @@
       <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6807564" visible="true" weight="0.4452954" />
-      <window_info id="Structure" order="1" sideWeight="0.3192436" side_tool="true" visible="true" weight="0.4452954" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6784141" visible="true" weight="0.20415778" />
+      <window_info id="Structure" order="1" sideWeight="0.3215859" side_tool="true" visible="true" weight="0.20415778" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="UI Designer" order="6" />
-      <window_info id="simpleUML" order="7" sideWeight="0.7330367" weight="0.32932165" />
+      <window_info id="simpleUML" order="7" sideWeight="0.73192436" weight="0.32932165" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32929516" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39096916" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3876652" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39977974" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32929516" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32599118" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32378855" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32268724" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -631,13 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1368">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/net/URLClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7824">
@@ -645,92 +649,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/CardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="121" column="1" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getSpell#0;class#CardController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/iCardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/Minion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Models/Spell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Services/CardService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Services/DBService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Services/iCardService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="70" selection-start-line="8" selection-start-column="70" selection-end-line="8" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Services/iDBService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/DBConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
@@ -748,32 +670,134 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/View/ConsoleApp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/start.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="132" column="41" selection-start-line="132" selection-start-column="41" selection-end-line="132" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#mainMenue#0;class#ConsoleApp#0" />
-            <element signature="method#showAllCards#0;class#ConsoleApp#0" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Repository/iCardRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/iCardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="66" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Services/DBService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/Minion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/View/iConsoleApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        <state relative-caret-position="456">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/start.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Services/iDBService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="240">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Services/iCardService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/mashape/unirest/unirest-java/1.4.9/unirest-java-1.4.9.jar!/com/mashape/unirest/http/JsonNode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/CardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1296">
+          <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar!/com/google/gson/Gson.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10392">
+          <caret line="486" column="17" selection-start-line="486" selection-start-column="17" selection-end-line="486" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Repository/CardRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/ConsoleApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4056">
+          <caret line="178" column="44" selection-start-line="178" selection-start-column="44" selection-end-line="178" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Services/CardService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1152">
+          <caret line="52" column="49" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
         </state>
       </provider>
     </entry>

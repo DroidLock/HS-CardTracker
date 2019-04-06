@@ -13,6 +13,6 @@ public class Spell extends Card {
                 "Cost: " + super.getCost() + '\n' +
                 "Type: " + super.getType() + '\n' +
                 "Text: " + super.getText() + '\n' +
-                "Image: " + super.getImage() + '\n';
+                "Image: " + super.getImgGold() + '\n';
     }
 }

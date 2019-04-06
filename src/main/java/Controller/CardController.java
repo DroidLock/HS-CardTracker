@@ -7,6 +7,9 @@ import Services.CardService;
 import Services.DBService;
 import Services.iCardService;
 import Services.iDBService;
+import com.google.gson.Gson;
+import com.google.gson.JsonIOException;
+import com.google.gson.JsonParseException;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -17,6 +20,7 @@ public class CardController implements iCardController {
 
     private iCardService service = new CardService();
     private iDBService dataservice = new DBService();
+    private Gson gson = new Gson();
 
     /**
      * Method calls service to get a single spell card and deserialize JSONArray the returns
@@ -27,31 +31,23 @@ public class CardController implements iCardController {
      */
     public String getMinion(String userInput) throws UnirestException {
 
-//        Check user input
-//        System.out.println(userInput);
-
         // Get Array back from API service
         JSONArray cardResponse = service.searchMinion(userInput);
-
+        String json = cardResponse.getJSONObject(0).toString();
 //        Output to check whole json
 //        System.out.println(cardResponse.toString());
 
         try {
-            String name = cardResponse.getJSONObject(0).getString("name");
-            int cost = cardResponse.getJSONObject(0).getInt("cost");
-            int attack = cardResponse.getJSONObject(0).getInt("attack");
-            int health = cardResponse.getJSONObject(0).getInt("health");
-            String type = cardResponse.getJSONObject(0).getString("type");
-            String text = cardResponse.getJSONObject(0).getString("text");
-            String rarity = cardResponse.getJSONObject(0).getString("rarity");
-            String image = cardResponse.getJSONObject(0).getString("imgGold");
-
-            return new Minion(name, cost, attack, health, type, text, rarity, image).toString();
-
+            Minion minion = gson.fromJson(json, Minion.class);//
+            return minion.toString();
         } catch (JSONException e) {
 //             exception thrown when json could not be read properly and is needed so a NullPointerException can be thrown/caught in view ConsoleApp
 //            System.out.println("Json exception Controller");
 //            e.printStackTrace();
+        } catch (JsonIOException e){
+            System.out.println("Daten konnten von der API nicht gelesen werden");
+        } catch (JsonParseException e){
+            System.out.println("Json Datei konnte nicht geparst werden");
         }
         return null;
     }
@@ -65,16 +61,12 @@ public class CardController implements iCardController {
      * @throws UnirestException
      */
     public String getSpell(String userInput) throws UnirestException {
+
         JSONArray cardResponse = service.searchMinion(userInput);
+        String json = cardResponse.getJSONObject(0).toString();
         try {
-            String name = cardResponse.getJSONObject(0).getString("name");
-            int cost = cardResponse.getJSONObject(0).getInt("cost");
-            String type = cardResponse.getJSONObject(0).getString("type");
-            String text = cardResponse.getJSONObject(0).getString("text");
-            String image = cardResponse.getJSONObject(0).getString("imgGold");
-
-
-            return new Spell(name, cost, type, text, image).toString();
+            Spell spell = gson.fromJson(json, Spell.class);
+            return spell.toString();
 
         } catch (JSONException e) {
 //            exception thrown when json could not be read properly and is needed so a NullPointerException can be thrown/caught in view ConsoleApp
@@ -111,6 +103,27 @@ public class CardController implements iCardController {
 
             Minion minionDB = new Minion(name, cost, attack, health, type, text, rarity, image);
             dataservice.saveMinion(minionDB);
+        } catch (JSONException e) {
+//             exception thrown when json could not be read properly and is needed so a NullPointerException can be thrown/caught in view ConsoleApp
+//            System.out.println("Json exception Controller");
+//            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void insertSpell(String spell) throws UnirestException {
+        JSONArray cardResponse = service.searchSpell(spell);
+
+        try {
+            String name = cardResponse.getJSONObject(0).getString("name");
+            int cost = cardResponse.getJSONObject(0).getInt("cost");
+            String type = cardResponse.getJSONObject(0).getString("type");
+            String text = cardResponse.getJSONObject(0).getString("text");
+            String image = cardResponse.getJSONObject(0).getString("imgGold");
+
+            Spell spellDB = new Spell(name, cost, type, text, image);
+            dataservice.saveSpell(spellDB);
         } catch (JSONException e) {
 //             exception thrown when json could not be read properly and is needed so a NullPointerException can be thrown/caught in view ConsoleApp
 //            System.out.println("Json exception Controller");

@@ -24,7 +24,7 @@ public class ConsoleApp implements iConsoleApp {
     /**
      * @return
      */
-    public String mainMenue() throws IOException {
+    public void mainMenue() throws IOException {
         String selection = "";
         try {
             while (!selection.equals("3")) {
@@ -56,14 +56,13 @@ public class ConsoleApp implements iConsoleApp {
         } catch (UnirestException e) {
             e.printStackTrace();
         }
-        return null;
     }
 
     /**
      * @return
      * @throws UnirestException
      */
-    public String showAllCards() throws UnirestException {
+    public void showAllCards() throws UnirestException {
         JSONArray all = controller.getAllCards();
 
         //ToDo Alphabetical order not working, has to be fixed... running now without error, but not sorting
@@ -73,7 +72,6 @@ public class ConsoleApp implements iConsoleApp {
             System.out.printf("%-40s%s%n", "Cardname: " + all.getJSONObject(i).getString("name"),
                     "Cardtype: " + all.getJSONObject(i).getString("type"));
         }
-        return null;
     }
 
     /**
@@ -174,7 +172,18 @@ public class ConsoleApp implements iConsoleApp {
                 //Get the Card-Object back which was searched and print out to console
                 String card = controller.getSpell(cardName);
                 System.out.println(card);
-
+                System.out.println();
+                System.out.println("1. Möchten sie die Karte speichern");
+                System.out.println("2. Weiter suchen");
+                String selection = reader.readLine();
+                if (selection.equals("1")) {
+                    controller.insertSpell(cardName);
+                }
+                if (selection.equals("2")) {
+                    searchMenue();
+                } else {
+                    System.out.println("Wählen sie einen Menüpunkt aus");
+                }
             } catch (NullPointerException e) {
                 System.out.println("Karte konnte nicht gefunden werden ConsoleApp");
 
@@ -194,13 +203,7 @@ public class ConsoleApp implements iConsoleApp {
         System.exit(1);
     }
 
-    /**
-     *
-     */
-    public void saveCard() {
-        //Todo create a Mehtod to save card in Database
 
-    }
 
 
 }
