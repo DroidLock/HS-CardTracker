@@ -63,14 +63,19 @@ public class ConsoleApp implements iConsoleApp {
      * @throws UnirestException
      */
     public void showAllCards() throws UnirestException {
-        JSONArray all = controller.getAllCards();
+        try {
+            JSONArray all = controller.getAllCards();
 
-        //ToDo Alphabetical order not working, has to be fixed... running now without error, but not sorting
-        Arrays.sort(new JSONArray[]{all});
+            // TODO: 08/04/2019  Alphabetical order not working, has to be fixed... running now without error, but not sorting
 
-        for (int i = 0; i < all.length(); i++) {
-            System.out.printf("%-40s%s%n", "Cardname: " + all.getJSONObject(i).getString("name"),
-                    "Cardtype: " + all.getJSONObject(i).getString("type"));
+            Arrays.sort(new JSONArray[]{all});
+
+            for (int i = 0; i < all.length(); i++) {
+                System.out.printf("%-40s%s%n", "Cardname: " + all.getJSONObject(i).getString("name"),
+                        "Cardtype: " + all.getJSONObject(i).getString("type"));
+            }
+        } catch (NullPointerException e){
+
         }
     }
 
@@ -142,8 +147,7 @@ public class ConsoleApp implements iConsoleApp {
                     System.out.println("Wählen sie einen Menüpunkt aus");
                 }
             } catch (NullPointerException e) {
-                System.out.println("Karte konnte nicht gefunden werden ConsoleApp");
-//                e.printStackTrace();
+
             } catch (UnirestException e) {
                 e.printStackTrace();
             }
@@ -185,9 +189,7 @@ public class ConsoleApp implements iConsoleApp {
                     System.out.println("Wählen sie einen Menüpunkt aus");
                 }
             } catch (NullPointerException e) {
-                System.out.println("Karte konnte nicht gefunden werden ConsoleApp");
 
-//                e.printStackTrace();
             } catch (UnirestException e) {
                 e.printStackTrace();
             }
@@ -202,8 +204,6 @@ public class ConsoleApp implements iConsoleApp {
         System.out.println("Danke fürs Benutzes der App");
         System.exit(1);
     }
-
-
 
 
 }

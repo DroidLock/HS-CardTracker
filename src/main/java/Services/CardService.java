@@ -14,26 +14,35 @@ public class CardService implements iCardService {
      */
     public JSONArray searchMinion(String minion) throws UnirestException {
         //// TODO: 24/03/2019 exception handling
-        HttpResponse<JsonNode> response = Unirest.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/" + minion)
-                .header("X-RapidAPI-Key", "b3e04ebcc2mshe4ccee4fec2e0b2p155f72jsnb66518417065")
-                .asJson();
+        try {
+            HttpResponse<JsonNode> response = Unirest.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/" + minion)
+                    .header("X-RapidAPI-Key", "b3e04ebcc2mshe4ccee4fec2e0b2p155f72jsnb66518417065")
+                    .asJson();
 
-        JSONArray list = response.getBody().getArray();
+            JSONArray list = response.getBody().getArray();
 
-        return list;
+            return list;
+        } catch (UnirestException e){
+            System.out.println("Die Verbindung zur API konnte nicht erstellt werden");
+        }
+        return null;
     }
 
-    public JSONArray searchSpell(String spell) throws UnirestException {
+    public JSONArray searchSpell(String spell){
 
-        //// TODO: 24/03/2019 exception handling
+       try {
 
-        HttpResponse<JsonNode> response = Unirest.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/" + spell)
-                .header("X-RapidAPI-Key", "b3e04ebcc2mshe4ccee4fec2e0b2p155f72jsnb66518417065")
-                .asJson();
+           HttpResponse<JsonNode> response = Unirest.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/" + spell)
+                   .header("X-RapidAPI-Key", "b3e04ebcc2mshe4ccee4fec2e0b2p155f72jsnb66518417065")
+                   .asJson();
 
-        JSONArray list = response.getBody().getArray();
+           JSONArray list = response.getBody().getArray();
 
-        return list;
+           return list;
+       } catch (UnirestException e) {
+           System.out.println("Die Verbindung zur API konnte nicht erstellt werden");
+       }
+       return null;
     }
 
     /**
@@ -42,17 +51,21 @@ public class CardService implements iCardService {
      * @return An array of all cards got from request
      * @throws UnirestException
      */
-    public JSONArray getAllCards() throws UnirestException {
+    public JSONArray getAllCards() {
 
         //// TODO: 24/03/2019 exception handling
+        try {
+            HttpResponse<JsonNode> response = Unirest.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards")
+                    .header("X-RapidAPI-Key", "b3e04ebcc2mshe4ccee4fec2e0b2p155f72jsnb66518417065")
+                    .asJson();
 
-        HttpResponse<JsonNode> response = Unirest.get("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards")
-                .header("X-RapidAPI-Key", "b3e04ebcc2mshe4ccee4fec2e0b2p155f72jsnb66518417065")
-                .asJson();
-
-        JSONArray list = response.getBody().getObject().getJSONArray("Classic");
+            JSONArray list = response.getBody().getObject().getJSONArray("Classic");
 
 //      System.out.println(list.toString());
-        return list;
+            return list;
+        }  catch (UnirestException e) {
+            System.out.println("Die Verbindung zur API konnte nicht hergestellt werden");
+        }
+        return null;
     }
 }

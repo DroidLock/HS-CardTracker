@@ -1,6 +1,7 @@
 package Controller;
 
 
+import Models.Card;
 import Models.Minion;
 import Models.Spell;
 import Services.CardService;
@@ -65,7 +66,7 @@ public class CardController implements iCardController {
         JSONArray cardResponse = service.searchMinion(userInput);
         String json = cardResponse.getJSONObject(0).toString();
         try {
-            Spell spell = gson.fromJson(json, Spell.class);
+            Card spell = gson.fromJson(json, Spell.class);
             return spell.toString();
 
         } catch (JSONException e) {
@@ -94,15 +95,16 @@ public class CardController implements iCardController {
         try {
             String name = cardResponse.getJSONObject(0).getString("name");
             int cost = cardResponse.getJSONObject(0).getInt("cost");
-            int attack = cardResponse.getJSONObject(0).getInt("attack");
-            int health = cardResponse.getJSONObject(0).getInt("health");
             String type = cardResponse.getJSONObject(0).getString("type");
             String text = cardResponse.getJSONObject(0).getString("text");
             String rarity = cardResponse.getJSONObject(0).getString("rarity");
             String image = cardResponse.getJSONObject(0).getString("imgGold");
+            int attack = cardResponse.getJSONObject(0).getInt("attack");
+            int health = cardResponse.getJSONObject(0).getInt("health");
 
-            Minion minionDB = new Minion(name, cost, attack, health, type, text, rarity, image);
-            dataservice.saveMinion(minionDB);
+            Card minionDB = new Minion(name,cost,type,text,image,attack,health,rarity);
+            System.out.println(minionDB.toString());
+            dataservice.saveCard(minionDB);
         } catch (JSONException e) {
 //             exception thrown when json could not be read properly and is needed so a NullPointerException can be thrown/caught in view ConsoleApp
 //            System.out.println("Json exception Controller");
@@ -122,8 +124,8 @@ public class CardController implements iCardController {
             String text = cardResponse.getJSONObject(0).getString("text");
             String image = cardResponse.getJSONObject(0).getString("imgGold");
 
-            Spell spellDB = new Spell(name, cost, type, text, image);
-            dataservice.saveSpell(spellDB);
+            Card spellDB = new Spell(name, cost, type, text, image);
+            dataservice.saveCard(spellDB);
         } catch (JSONException e) {
 //             exception thrown when json could not be read properly and is needed so a NullPointerException can be thrown/caught in view ConsoleApp
 //            System.out.println("Json exception Controller");

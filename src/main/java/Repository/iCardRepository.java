@@ -1,11 +1,9 @@
 package Repository;
 
-import Models.Minion;
-import Models.Spell;
+import Models.Card;
 
 import java.sql.SQLException;
 
-public interface iCardRepository {
-    public void saveMinion (Minion minion) throws SQLException;
-    public void saveSpell (Spell spell) throws SQLException;
+public interface iCardRepository{
+    void saveCard(Card selectedCard) throws SQLException;
 }

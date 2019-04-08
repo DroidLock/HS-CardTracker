@@ -1,12 +1,11 @@
 package Services;
 
-import Models.Minion;
-import Models.Spell;
+import Models.Card;
 
 import java.sql.SQLException;
 
 public interface iDBService {
-    void saveMinion(Minion minion) throws SQLException;
 
-    void saveSpell(Spell spell) throws SQLException;
+    void saveCard(Card card) throws SQLException;
+
 }

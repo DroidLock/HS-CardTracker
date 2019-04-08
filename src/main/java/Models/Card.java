@@ -1,25 +1,21 @@
 package Models;
 
-public class Card {
+import javax.persistence.*;
+
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public abstract class Card {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Column(name = "id", updatable = false, nullable = false)
+    protected Long id;
+
     private String name;
     private int cost;
-    private int attack;
-    private int health;
     private String type;
     private String text;
-    private String rarity;
     private String imgGold;
-
-    public Card(String name, int cost, int attack, int health, String type, String text, String rarity, String imgGold) {
-        this.name = name;
-        this.cost = cost;
-        this.attack = attack;
-        this.health = health;
-        this.type = type;
-        this.text = text;
-        this.rarity = rarity;
-        this.imgGold = imgGold;
-    }
 
     public Card(String name, int cost, String type, String text, String imgGold) {
         this.name = name;
@@ -27,6 +23,18 @@ public class Card {
         this.type = type;
         this.text = text;
         this.imgGold = imgGold;
+    }
+
+    public Card() {
+
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -45,22 +53,6 @@ public class Card {
         this.cost = cost;
     }
 
-    public int getAttack() {
-        return attack;
-    }
-
-    public void setAttack(int attack) {
-        this.attack = attack;
-    }
-
-    public int getHealth() {
-        return health;
-    }
-
-    public void setHealth(int health) {
-        this.health = health;
-    }
-
     public String getType() {
         return type;
     }
@@ -75,14 +67,6 @@ public class Card {
 
     public void setText(String text) {
         this.text = text;
-    }
-
-    public String getRarity() {
-        return rarity;
-    }
-
-    public void setRarity(String rarity) {
-        this.rarity = rarity;
     }
 
     public String getImgGold() {

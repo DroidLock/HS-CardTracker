@@ -1,9 +1,17 @@
 package Models;
 
+import javax.persistence.Entity;
+
+@Entity(name = "Spell")
 public class Spell extends Card {
 
-    public Spell(String name, int cost, String type, String text, String image) {
-        super(name, cost, type, text, image);
+
+    public Spell(String name, int cost, String type, String text, String imgGold) {
+        super(name, cost, type, text, imgGold);
+    }
+
+    public Spell() {
+        super();
     }
 
     @Override
@@ -15,4 +23,5 @@ public class Spell extends Card {
                 "Text: " + super.getText() + '\n' +
                 "Image: " + super.getImgGold() + '\n';
     }
+
 }
