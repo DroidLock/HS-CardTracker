@@ -14,6 +14,9 @@ public class Spell extends Card {
         super();
     }
 
+    /**
+     * @return
+     */
     @Override
     public String toString() {
         return "Cardresult: " + '\n' +

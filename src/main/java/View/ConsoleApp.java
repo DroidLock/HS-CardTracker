@@ -191,7 +191,7 @@ public class ConsoleApp implements iConsoleApp {
             } catch (NullPointerException e) {
 
             } catch (UnirestException e) {
-                e.printStackTrace();
+//                e.printStackTrace();
             }
         }
     }

@@ -12,7 +12,13 @@ public class DBService implements iDBService {
     /**
      * @param card
      */
-    public void saveCard(Card card) throws SQLException{
-        repo.saveCard(card);
+    public void saveCard(Card card){
+       try{
+           repo.saveCard(card);
+
+        System.out.println("Speichern erfolgreich");
+       } catch (SQLException e){
+           System.out.println("Speichern war nicht erfolgreich");
+       }
     }
 }

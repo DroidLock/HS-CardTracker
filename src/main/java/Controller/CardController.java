@@ -15,8 +15,6 @@ import com.mashape.unirest.http.exceptions.UnirestException;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import java.sql.SQLException;
-
 public class CardController implements iCardController {
 
     private iCardService service = new CardService();
@@ -33,7 +31,7 @@ public class CardController implements iCardController {
     public String getMinion(String userInput) throws UnirestException {
 
         // Get Array back from API service
-        JSONArray cardResponse = service.searchMinion(userInput);
+        JSONArray cardResponse = service.searchCard(userInput);
         String json = cardResponse.getJSONObject(0).toString();
 //        Output to check whole json
 //        System.out.println(cardResponse.toString());
@@ -63,7 +61,7 @@ public class CardController implements iCardController {
      */
     public String getSpell(String userInput) throws UnirestException {
 
-        JSONArray cardResponse = service.searchMinion(userInput);
+        JSONArray cardResponse = service.searchCard(userInput);
         String json = cardResponse.getJSONObject(0).toString();
         try {
             Card spell = gson.fromJson(json, Spell.class);
@@ -89,8 +87,12 @@ public class CardController implements iCardController {
         return result;
     }
 
+    /**
+     * @param minion
+     * @throws UnirestException
+     */
     public void insertMinion(String minion) throws UnirestException {
-        JSONArray cardResponse = service.searchMinion(minion);
+        JSONArray cardResponse = service.searchCard(minion);
 
         try {
             String name = cardResponse.getJSONObject(0).getString("name");
@@ -109,13 +111,15 @@ public class CardController implements iCardController {
 //             exception thrown when json could not be read properly and is needed so a NullPointerException can be thrown/caught in view ConsoleApp
 //            System.out.println("Json exception Controller");
 //            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
         }
     }
 
+    /**
+     * @param spell
+     * @throws UnirestException
+     */
     public void insertSpell(String spell) throws UnirestException {
-        JSONArray cardResponse = service.searchSpell(spell);
+        JSONArray cardResponse = service.searchCard(spell);
 
         try {
             String name = cardResponse.getJSONObject(0).getString("name");
@@ -130,8 +134,6 @@ public class CardController implements iCardController {
 //             exception thrown when json could not be read properly and is needed so a NullPointerException can be thrown/caught in view ConsoleApp
 //            System.out.println("Json exception Controller");
 //            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
         }
     }
 }
