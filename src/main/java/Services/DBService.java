@@ -47,17 +47,17 @@ public class DBService implements iDBService {
             xStream.addImplicitCollection(Card.class, "deck");
             String xml = xStream.toXML(repo.getDeck());
             transformer = transformerFactory.newTransformer();
-            FileOutputStream outputStream = new FileOutputStream(new File("C:\\Test"));
+            System.out.println(xml);
+
 
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document doc = builder.parse(new InputSource(new StringReader(xml)));
 
-            OutputStreamWriter osq = new OutputStreamWriter(outputStream);
-            osq.write(xml);
-            transformer.transform(new DOMSource(doc), new StreamResult());
+            FileOutputStream outputStream = new FileOutputStream(new File("deck.xml"));
+            transformer.transform(new DOMSource(doc), new StreamResult(outputStream));
 
-            System.out.println(xml);
+            System.out.println("Export hat geklappt!");
 
         } catch (SQLException e){
             System.out.println("Fehler beim Verbindungsaufbau mit der Datenbank");

@@ -8,6 +8,7 @@ import org.json.JSONArray;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -57,6 +58,8 @@ public class ConsoleApp implements iConsoleApp {
                 }
             }
         } catch (UnirestException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
@@ -208,7 +211,7 @@ public class ConsoleApp implements iConsoleApp {
         System.exit(1);
     }
 
-    public void exportToXML() {
-
+    public void exportToXML() throws SQLException {
+        controller.exportDB();
     }
 }

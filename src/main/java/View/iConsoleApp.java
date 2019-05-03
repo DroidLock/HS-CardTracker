@@ -3,6 +3,7 @@ package View;
 import com.mashape.unirest.http.exceptions.UnirestException;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public interface iConsoleApp {
     //String or void in Method=????
@@ -17,7 +18,7 @@ public interface iConsoleApp {
 
     public void searchSpell() throws IOException;
 
-    public void exportToXML();
+    public void exportToXML() throws SQLException;
 
     public void stopApp();
 }
