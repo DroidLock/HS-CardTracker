@@ -4,6 +4,10 @@ import javax.persistence.*;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@NamedQueries({
+        @NamedQuery(name = "getDeck",
+        query = "select e FROM Card e")
+})
 public abstract class Card {
 
     @Id
