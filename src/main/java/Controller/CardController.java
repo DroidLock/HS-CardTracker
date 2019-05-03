@@ -15,6 +15,8 @@ import com.mashape.unirest.http.exceptions.UnirestException;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import java.sql.SQLException;
+
 public class CardController implements iCardController {
 
     private iCardService service = new CardService();
@@ -135,5 +137,9 @@ public class CardController implements iCardController {
 //            System.out.println("Json exception Controller");
 //            e.printStackTrace();
         }
+    }
+
+    public void exportDB() throws SQLException {
+        dataservice.exportDeck();
     }
 }

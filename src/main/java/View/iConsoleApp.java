@@ -17,6 +17,8 @@ public interface iConsoleApp {
 
     public void searchSpell() throws IOException;
 
+    public void exportToXML();
+
     public void stopApp();
 }
 

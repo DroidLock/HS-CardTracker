@@ -33,7 +33,8 @@ public class ConsoleApp implements iConsoleApp {
                 System.out.println();
                 System.out.println("1. Alle Classic Karten anzeigen");
                 System.out.println("2. Karte suchen");
-                System.out.println("3. Beenden");
+                System.out.println("3. Export Deck als XML");
+                System.out.println("4. Beenden");
 
 
                 selection = reader.readLine();
@@ -46,6 +47,8 @@ public class ConsoleApp implements iConsoleApp {
                     searchMenue();
 
                 } else if ("3".equals(selection)) {
+                    exportToXML();
+                } else if ("4".equals(selection)) {
                     stopApp();
 
                 } else {
@@ -205,5 +208,7 @@ public class ConsoleApp implements iConsoleApp {
         System.exit(1);
     }
 
+    public void exportToXML() {
 
+    }
 }

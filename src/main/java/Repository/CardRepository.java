@@ -29,14 +29,13 @@ public class CardRepository implements iCardRepository {
 
     }
 
-    public void getDeck(){
+    public List<Card> getDeck(){
         EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("hearthstone");
         EntityManager entityManager = emfactory.createEntityManager();
 
         entityManager.getTransaction().begin();
             List<Card> cardList = entityManager.createNamedQuery("getDeck", Card.class).getResultList();
-//            XStream xStream = new XStream();
-
+            return cardList;
     }
 
 }
